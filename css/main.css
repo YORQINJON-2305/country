@@ -1,0 +1,201 @@
+:root {
+  --main-bg-color: #fff;
+  --main-text-color: #111517;
+  --main-border-radius: 5px;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-display: swap;
+  font-weight: 300;
+  src: url("../fonts/nunito-sans-v12-latin-300.woff2") format("woff2"),
+    url("../fonts/nunito-sans-v12-latin-300.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/nunito-sans-v12-latin-regular.woff2") format("woff2"),
+    url("../fonts/nunito-sans-v12-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-display: swap;
+  font-weight: 600;
+  src: url("../fonts/nunito-sans-v12-latin-600.woff2") format("woff2"),
+    url("../fonts/nunito-sans-v12-latin-600.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-display: swap;
+  font-weight: 700;
+  src: url("../fonts/nunito-sans-v12-latin-700.woff2") format("woff2"),
+    url("../fonts/nunito-sans-v12-latin-700.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-display: swap;
+  font-weight: 800;
+  src: url("../fonts/nunito-sans-v12-latin-800.woff2") format("woff2"),
+    url("../fonts/nunito-sans-v12-latin-800.woff") format("woff");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", "Arail", sans-serif;
+}
+
+.visually-hidden{
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.container {
+  width: 1320px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.site-head{
+    background-color: var(--main-bg-color);
+}
+
+.site-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0px;
+}
+
+.main-title{
+    font-size: 24px;
+    color: var(--main-text-color);
+    font-weight: 800;
+}
+
+.theme{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
+
+.theme::before{
+    width: 17px;
+    height: 16px;
+    display: block;
+    background-image: url("../images/moon.png");
+    background-position: center;
+    margin-right: 10px;
+    content: "";
+}
+
+/* Country */
+
+.country-section{
+    background-color: #FAFAFA;
+    padding-top: 48px;
+}
+
+.form-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.search-input{
+    width: 480px;
+    box-shadow: 0px 2px 9px #0000000e;
+    padding: 18px 40px 18px 74px;
+    background-image: url("../images/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 200px);
+    border-radius: var(--main-border-radius);
+    border: none;
+    color:#848484;
+    outline: none;
+}
+
+.search-input:focus{
+    box-shadow: 0px 0px 3px 0px #7d7dffb4;
+}
+
+.country-select{
+    padding: 18px 77px 18px 24px;
+    box-shadow: 0px 2px 9px #0000000e;
+    font-size: 14px;
+    background-image: url("../images/drop-down.svg");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 75px);
+    color: var(--main-text-color);
+    outline: none;
+    appearance: none;
+    border: none;
+    border-radius: var(--main-border-radius);
+}
+
+.country-select:focus{
+    box-shadow: 0px 0px 3px 0px #7d7dffb4;
+}
+
+.country-list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+.country-item{
+    width: 264px;
+    margin-right: 74px;
+    margin-bottom: 67px;
+    padding-bottom: 40px;
+    background-color: var(--main-bg-color);
+    border-radius: var(--main-border-radius);
+}
+
+.country-item:nth-child(4){
+    margin-right: 0;
+}
+
+.country-item:nth-child(8){
+    margin-right: 0;
+}
+.country-flag{
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 24px;
+}
+
+.country-info{
+    padding: 0px 10px 0px 24px;
+}
+
+.country-name{
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.info-text{
+    margin: 0;
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--main-text-color);
+}
